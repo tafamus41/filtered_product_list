@@ -1,17 +1,21 @@
 import React from "react";
 import { Button, Container, Stack } from "react-bootstrap";
 import "./Header.scss";
+import { categories } from "../../helper/data";
 
 export const Header = () => {
+  console.log(categories);
   return (
     <Container className="header">
       <h1>Products List</h1>
       <Stack
-        direction="vertical"
+        direction="horizontal"
         gap={3}
         className="btns justify-content-center flex-md-row"
       >
-        Category Buttons
+        {categories.map((item) => (
+          <button className="p-2">{item.toUpperCase()}</button>
+        ))}
       </Stack>
     </Container>
   );
