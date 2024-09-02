@@ -14,7 +14,7 @@ export const Header = () => {
         className="btns justify-content-center flex-md-row"
       >
         {categories.map((item) => (
-          <button key={item} className="p-2">{item.toUpperCase()}</button>
+          <button key={item} className="">{item.toUpperCase()}</button>
         ))}
       </Stack>
     </Container>
