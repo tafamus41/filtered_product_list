@@ -17,7 +17,7 @@ const ProductsList = ({}) => {
       <Container className="product-list rounded-4 my-4 p-3">
         <Row className="g-3 justify-content-center">
           {products.map((item) => (
-            <ProductCard key={item.id} item={item} />
+            <ProductCard key={item.id} {...item} />
           ))}
         </Row>
       </Container>
