@@ -4,7 +4,7 @@ import "./Header.scss";
 import { categories } from "../../helper/data";
 
 export const Header = () => {
-  console.log(categories);
+  // console.log(categories);
   return (
     <Container className="header">
       <h1>Products List</h1>
@@ -14,7 +14,7 @@ export const Header = () => {
         className="btns justify-content-center flex-md-row"
       >
         {categories.map((item) => (
-          <button className="p-2">{item.toUpperCase()}</button>
+          <button key={item} className="p-2">{item.toUpperCase()}</button>
         ))}
       </Stack>
     </Container>
