@@ -4,11 +4,11 @@ import "./Header.scss";
 import { categories } from "../../helper/data";
 // import { useState } from "react";
 
-export const Header = () => {
+export const Header = ({handleButon}) => {
 // const[category,setCategory]=useState("");
-// const[buton,setButon]=useState("");
-// const handleCategory=()=>{
 
+// const handleCategory=()=>{
+// console.log(handleButon());
 // }
   // console.log(categories);
   return (
@@ -20,7 +20,7 @@ export const Header = () => {
         className="btns justify-content-center flex-md-row"
       >
         {categories.map((item) => (
-          <button onClick={(e)=>{console.log(e.target.textContent)}} key={item} className="">{item.toUpperCase()}</button>
+          <button onClick={()=>handleButon(item)} key={item} className="">{item.toUpperCase()}</button>
         ))}
       </Stack>
     </Container>

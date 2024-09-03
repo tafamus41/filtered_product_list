@@ -4,13 +4,17 @@ import "./Products.scss";
 import { products } from "../../helper/data";
 import { Header } from "../header/Header";
 import { useState } from "react";
+import { categories } from "../../helper/data";
 
 const ProductsList = () => {
   // console.log(products);
+  // console.log(buton);
   const [search, setSearch] = useState("");
+  const [buton, setButon] = useState("all");
+  const handleButon = (category) => setButon(category);
   return (
     <>
-      <Header />
+      <Header handleButon={handleButon} />
       <Form.Control
         placeholder="Search Product..."
         type="search"
@@ -19,7 +23,9 @@ const ProductsList = () => {
       />
       <Container className="product-list rounded-4 my-4 p-3">
         <Row className="g-3 justify-content-center">
-          {products
+          {products.filter((item) => {
+              return buton === "all" || item.category === buton;
+            })
             .filter((item) =>
               item.title.toLowerCase().includes(search.trim().toLowerCase())
             )
