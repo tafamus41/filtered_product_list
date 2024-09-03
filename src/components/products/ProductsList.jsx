@@ -7,8 +7,6 @@ import { useState } from "react";
 import { categories } from "../../helper/data";
 
 const ProductsList = () => {
-  // console.log(products);
-  // console.log(buton);
   const [search, setSearch] = useState("");
   const [buton, setButon] = useState("all");
   const handleButon = (category) => setButon(category);
@@ -37,5 +35,4 @@ const ProductsList = () => {
     </>
   );
 };
-
 export default ProductsList;
