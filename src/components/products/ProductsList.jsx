@@ -21,9 +21,7 @@ const ProductsList = () => {
       />
       <Container className="product-list rounded-4 my-4 p-3">
         <Row className="g-3 justify-content-center">
-          {products.filter((item) => {
-              return buton === "all" || item.category === buton;
-            })
+          {products.filter((item) =>buton === "all"||item.category.includes(buton))
             .filter((item) =>
               item.title.toLowerCase().includes(search.trim().toLowerCase())
             )
