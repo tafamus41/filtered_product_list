@@ -6,7 +6,7 @@ import { Header } from "../header/Header";
 import { useState } from "react";
 
 const ProductsList = () => {
-  console.log(products);
+  // console.log(products);
   const [search, setSearch] = useState("");
   return (
     <>

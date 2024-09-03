@@ -15,6 +15,7 @@
 
   .btns {
     margin-top: 1rem;
+    display:flex;
 
     button {
       padding: 1rem;
@@ -30,4 +31,13 @@
       }
     }
   }
+
+}
+@media screen and (max-width:768px) {
+  .btns{
+    flex-direction: column;
+    button{
+      width: 50%;
+    }
+  } 
 }

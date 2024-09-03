@@ -3,9 +3,9 @@ import { Card, Col } from "react-bootstrap";
 import { MdFavorite } from "react-icons/md";
 
 const ProductCard = ({ image, id, description, title, price }) => {
-  console.log(id);
+  // console.log(id);
   return (
-    <Col xl={3}>
+    <Col sm={12} md={6} lg={4} xl={3}>
       <Card key={id} className="rounded-2 m-auto card" role="button">
         <Card.Header className="d-flex justify-content-between">
           <Card.Title>{price}$</Card.Title>
