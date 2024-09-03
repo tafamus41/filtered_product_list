@@ -4,7 +4,7 @@ import "./Products.scss";
 import { products } from "../../helper/data";
 import { Header } from "../header/Header";
 import { useState } from "react";
-import { categories } from "../../helper/data";
+// import { categories } from "../../helper/data";
 
 const ProductsList = () => {
   const [search, setSearch] = useState("");
